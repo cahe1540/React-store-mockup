@@ -1,0 +1,109 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Hydrangea",
+            "description": "A plant with beautiful fluffy flowers to decorate your garden",
+            "image": "/img/hydrangea.jpg",
+            "price": 18.99
+        },
+        {
+            "id": 2,
+            "name": "Bird of Paradise",
+            "description": "A tropical plant that produces flowers resembling humming birds.",
+            "image": "/img/birdsofparadise.jpg",
+            "price": 29.99
+        },
+        {
+            "id": 3,
+            "name": "Rose",
+            "description": "A thorny, bushy plant that produces well scented flowers.",
+            "image": "/img/rose.jpg",
+            "price": 25.99
+        },
+        {
+            "id": 4,
+            "name": "Lily",
+            "description": "A plant that produces bright large flowers.",
+            "image": "/img/lily.jpg",
+            "price": 25.99
+        },
+        {
+            "id": 5,
+            "name": "Bugambilia",
+            "description": "A thorny, bushy plant that produces light, fluffy flowers.",
+            "image": "/img/bugambilia.jpg",
+            "price": 9.99
+        },
+        {
+            "id": 6,
+            "name": "Daisy",
+            "description": "A plant that produces beautiful, bright flowers.",
+            "image": "/img/daisy.jpg",
+            "price": 11.99
+        },
+        {
+            "id": 7,
+            "name": "Agapanthus",
+            "description": "A tropical plant that produces ball like flowers.",
+            "image": "/img/agapanthus.jpg",
+            "price": 29.99
+        },
+        {
+            "id": 8,
+            "name": "Jacaranda(Saplings ONLY)",
+            "description": "A tree that produces marvelous flower blooms.",
+            "image": "/img/jacaranda.jpg",
+            "price": 11.99
+        },
+        {
+            "id": 9,
+            "name": "Lavender",
+            "description": "A bushy plant that produces colurful, long flowers.",
+            "image": "/img/lavender.jpg",
+            "price": 15.99
+        },
+        {
+            "id": 10,
+            "name": "Dahlia",
+            "description": "A plant that produces colorful bulbous flowers.",
+            "image": "/img/dahlia.jpg",
+            "price": 21.99
+        },
+        {
+            "id": 11,
+            "name": "Pansie",
+            "description": "Small plant that produces bright, multicolored flowers.",
+            "image": "/img/pansies.jpg",
+            "price": 20.99
+        },
+        {
+            "id": 12,
+            "name": "Petunia",
+            "description": "Plant that produces a flower with rounded edes.",
+            "image": "/img/petunia.jpg",
+            "price": 18.99
+        },
+        {
+            "id": 13,
+            "name": "Jasmine",
+            "description": "A viny plant that produces beautiful, colorful flower blooms.",
+            "image": "/img/jasmine.jpg",
+            "price": 15.99
+        },
+        {
+            "id": 14,
+            "name": "Gardenia",
+            "description": "Beautiful fluffy flowers to decorate your garden",
+            "image": "/img/gardenia.jpg",
+            "price": 11.99
+        },
+        {
+            "id": 15,
+            "name": "Periwinkle",
+            "description": "Beautiful fluffy flowers to decorate your garden",
+            "image": "/img/periwinkle.jpg",
+            "price": 22.99
+        }
+    ]
+}

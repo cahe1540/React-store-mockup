@@ -1,38 +1,705 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+body {
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.4rem;
+}
+
+/*Menu*/
+.current {
+  color: rgb(196, 125, 32);
+}
+
+.menu {
+  margin-top: 2.5%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.loginAndCart {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 90%;
+  bottom: 92%;
+}
+
+.welcomeAndCart {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 79%;
+  bottom: 92%;
+}
+
+.loginAndCart a, .welcomeAndCart a {
+  font-size: 0.9rem;
+  margin-left: 1rem;
+}
+.menu li {
+  margin: 1rem 2rem;
+}
+
+.menu li a:hover {
+  color: rgb(196, 125, 32);
+}
+
+/*Forest*/
+.forest {
+  height: 24rem;
+  background: url("./img/forestBG2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+}
+
+/*cards*/
+.card {
+  background: #ebebeb;
+  width: 15rem;
+  height: 22rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px #e0e0e0 solid;
+  margin: 1.5rem;
+}
+.card img {
+  width: 100%;
+  height: 10rem;
+}
+.card h4 {
+  color: rgb(196, 125, 32);
+  position: relative;
+  bottom: 3%;
   text-align: center;
+  width: 90%;
+}
+.card p {
+  position: relative;
+  bottom: 9%;
+  text-align: center;
+  width: 90%;
+}
+.card .card-btnArea {
+  position: relative;
+  width: 95%;
+  bottom: 5%;
+  left: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card .card-btnArea .price {
+  margin-left: 8%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card .card-btnArea button {
+  width: 5.2rem;
+  height: 1.2rem;
+  font-size: 0.8rem;
+  background: rgb(196, 125, 32);
+  color: #efefef;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+.card .card-btnArea button:hover {
+  background: rgb(155, 155, 155);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*products Grid*/
+.productGrid {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.productsBG {
+  height: 24rem;
+  background: url("./img/products2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+/*Searchbar*/
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.searchbar {
+  text-indent: 0.6rem;
+  font-size: 1.2rem;
+  width: 35rem;
+  height: 1.9rem;
+  border: rgb(155, 155, 155) 1px solid;
+  outline: none;
+  border-radius: 0.3rem;
+}
+
+.search-btn {
+  position: relative;
+  right: 0.5rem;
+  width: 5rem;
+  height: 2.2rem;
+  border: rgb(155, 155, 155) 1px solid;
+  outline: none;
+  border-radius: 0.3rem;
+}
+
+.filters {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.filters input[type="radio"] {
+  margin-left: 2rem;
+}
+
+/*Featured*/
+.featured-section {
+  margin-top: 3rem;
+}
+
+.featured-section h2 {
+  text-align: center;
+  color: rgb(196, 125, 32);
+}
+
+.featuredItems {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.scrollFeatureLeft {
+  color: rgb(196, 125, 32);
+  position: relative;
+  right: 1%;
+  top: 12.5rem;
+}
+
+.scrollFeatureRight {
+  color: rgb(196, 125, 32);
+  position: relative;
+  left: 99%;
+  top: 12.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/*About*/
+.aboutBG {
+  height: 24rem;
+  background: url("./img/aboutbg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.about {
+  width: 70%;
+  margin: auto;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 31rem;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+/*Contact Us*/
+.ContactBG {
+  height: 24rem;
+  width: 100%;
+  background: url("./img/contactus2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.contact {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 24rem;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+/*Login and authentication */
+.login-section {
+  height: 27rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-section {
+  height: 36rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  width: 30%;
+  height: 23rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(236, 197, 144);
+  border-radius: 6px;
+}
+
+.signup {
+  width: 30%;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(236, 197, 144);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.recover-password,
+.reset-password {
+  height: 25.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 32%;
+  height: 10rem;
 }
 
-.App-link {
-  color: #61dafb;
+.recover-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 32%;
+  height: 17rem;
+  background: rgb(236, 197, 144);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.security-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 32%;
+  height: 12rem;
+  background: rgb(236, 197, 144);
+}
+
+.recover-form p {
+  position: relative;
+  bottom: 1rem;
+  margin-left: 13%;
+  margin-right: 13%;
+  margin-top: 10%;
+}
+
+.recover-form label {
+  bottom: 0.5rem;
+}
+
+.security-form label {
+  position: relative;
+  right: 5rem;
+  bottom: 0.5rem;
+}
+
+.recover-form input,
+.security-form input {
+  height: 1.7rem;
+  width: 70%;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  text-indent: 0.5rem;
+}
+
+.security-form input {
+  margin-bottom: 0.7rem;
+}
+
+.recover-form button,
+.security-form button {
+  margin-top: 0.5rem;
+  width: 71%;
+  height: 1.9rem;
+  border: none;
+  outline: none;
+  border: 3px;
+}
+
+.login form,
+.signup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login label,
+.signup label,
+.recover-form label,
+.reset-form label {
+  margin-bottom: 0.4rem;
+}
+
+.login input,
+.signup input {
+  margin-bottom: 1rem;
+  height: 1.7rem;
+  width: 140%;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+
+.login button,
+.signup button {
+  margin-top: 0.5rem;
+  width: 140%;
+  height: 1.8rem;
+  border: none;
+  outline: none;
+}
+
+.login a {
+  font-size: 12px;
+  margin-top: 0.25rem;
+}
+
+.login a.signup {
+  margin-top: 2rem;
+}
+
+.reset-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 32%;
+  height: 20rem;
+  background: rgb(236, 197, 144);
+}
+
+.reset-form input {
+  margin-bottom: 1rem;
+  height: 1.7rem;
+  width: 80%;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+
+.reset-form button {
+  margin-top: 1rem;
+  height: 1.8rem;
+  width: 81%;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+
+/*cart and checkout*/
+.shopping-cart-section {
+  margin-top: 10rem;
+  margin-bottom: 12rem;
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-vertical {
+  display: flex;
+  flex-direction: row;
+}
+
+.cart-item {
+  width: 60rem;
+  height: 6rem;
+  display: grid;
+  grid-template-columns: repeat(5, 2fr);
+  border: 1px solid rgb(236, 197, 144);
+  margin-bottom: 0.2rem;
+}
+
+.shopping-cart-section {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.cart-item-checkout {
+  width: 60rem;
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(236, 197, 144);
+  margin-bottom: 0.2rem;
+}
+
+.cart-item-checkout button {
+  width: 15%;
+  height: 1.7rem;
+  border-radius: 4px;
+  background: rgb(236, 197, 144);
+  border: 1px solid #efefef;
+  color: black;
+  outline: none;
+  float: right;
+  margin-right: 1.9rem;
+}
+
+.cart-item-checkout .total-cost {
+  float: right;
+  margin-right: 2rem;
+}
+
+.cart-item input {
+  width: 3rem;
+  height: 1rem;
+  margin-top: 1rem;
+  position: relative;
+  left: 3rem;
+}
+
+.cart-item .price {
+  position: relative;
+  left: 4rem;
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-item img {
+  height: 6rem;
+  width: 6rem;
+}
+
+.remove-from-cart {
+  color: grey;
+  position: relative;
+  top: 1rem;
+  left: 6rem;
+}
+
+.total-cost {
+  float: right;
+}
+
+.remove-from-cart:hover {
+  color: red;
+}
+
+/*side cart items*/
+.side-cart-item {
+  width: 18rem;
+  height: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 0.2rem;
+}
+
+.side-wrapper {
+  margin-left: 2rem;
+  flex-basis: 12rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.side-wrapper::-webkit-scrollbar {
+  width: 0;
+}
+
+.side-quantity {
+  position: relative;
+  left: 2rem;
+}
+
+.side-cost {
+  float: right;
+  margin-right: 1.4rem;
+}
+
+.side-cart-item img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.side-cart-list {
+  max-width: 20rem;
+  max-height: 28rem;
+  position: relative;
+  left: 3rem;
+  bottom: 5.9rem;
+  background: rgb(236, 197, 144);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+/*Checkout*/
+.checkout-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.checkout {
+  background: rgb(236, 197, 144);
+  height: 29rem;
+  width: 54%;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+}
+
+.checkout-cart-icon {
+  margin-right: 0.3rem;
+}
+
+.checkout-form-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.creditcard-icons {
+  margin-right: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.checkout button {
+  width: 86%;
+  height: 1.9rem;
+  margin-left: 2.4rem;
+  margin-top: 1rem;
+}
+
+.city-zip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.left-side,
+.right-side {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  margin-left: 2rem;
+  width: 20rem;
+}
+
+.left-side input[type="text"],
+.right-side input[type="text"] {
+  width: 16.2rem;
+  height: 1.2rem;
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+  outline: none;
+  margin-bottom: 1.5rem;
+}
+
+.city-zip input[type="text"],
+.city label {
+  width: 6rem;
+  height: 1.2rem;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.history{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
+/*Footer*/
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(196, 125, 32);
+  height: 7rem;
+  width: 100%;
+  color: #fff;
 }
