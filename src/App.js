@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css'
 import './components/UI/Nav'
 import { Nav } from './components/UI/Nav'
@@ -76,86 +76,88 @@ function App() {
   return (
     <Router>
     <div className="App">
-      <Route path = {['', '/', '/home']} exact render = {(props) =>
-      (
-        <>
-          <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
-          <ForestBG/>
-          <FeaturedItems featured = {featured}/>
-        </>
-      )} />
-      <Route path = {['/products']} exact render = {(props) =>
-      (
-        <>
-          <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
-          <ProductsBG/>
-          <ProductsGrid products = {products} sortProducts= {sortProducts} setProducts = {setProducts} />
-        </>
-      )} />
-      <Route path = {['/login']} exact render = {(props) =>
-      (
-        <>
-          <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
-          <Login />
-        </>
-      )} />
-      <Route path = '/dashboard' exact render = {(props) => (
-        <>
-          <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
-          <ProtectedRoute user = {user} component = {Dashboard} />
-        </>
-       )}/>
-      <Route path = {['/signup']} exact render = {(props) =>
-      (
-        <>
-          <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
-          <Signup />
-        </>
-      )} />
-      <Route path = '/about' exact render = {(props) => (
-        <>
-          <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
-          <AboutBG/>
-          <About/>
-        </>
-       )}/>
-       <Route path = '/recoverpassword' exact render = {(props) => (
-        <>
-          <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
-          <RecoverPassword/>
-        </>
-       )}/>
-       <Route path = '/resetpassword' exact render = {(props) => (
-        <>
-          <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
-          <ResetPassword/>
-        </>
-       )}/>
-       <Route path = '/securitycode' exact render = {(props) => (
-        <>
-          <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
-          <SecurityCode/>
-        </>
-       )}/>
-       <Route path = '/shoppingcart' exact render = {(props) => (
-        <>
-          <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
-          <CartList cartItems = {cartItems} />
-        </>
-       )}/>
-       <Route path = '/checkout' exact render = {(props) => (
-        <>
-          <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
-          <CheckOutForm cartItems = {cartItems} />
-        </>
-       )}/>
-      <Route path = '/contact' exact render = {(props) => (
-        <>
-          <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
-          <ContactBG/>
-          <Contact/>
-        </>
-       )}/>
+      <Switch>
+        <Route path = {['', '/', '/home']} exact render = {(props) =>
+        (
+          <>
+            <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
+            <ForestBG/>
+            <FeaturedItems featured = {featured}/>
+          </>
+        )} />
+        <Route path = {['/products']} exact render = {(props) =>
+        (
+          <>
+            <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
+            <ProductsBG/>
+            <ProductsGrid products = {products} sortProducts= {sortProducts} setProducts = {setProducts} />
+          </>
+        )} />
+        <Route path = {['/login']} exact render = {(props) =>
+        (
+          <>
+            <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
+            <Login />
+          </>
+        )} />
+        <Route path = '/dashboard' exact render = {(props) => (
+          <>
+            <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
+            <ProtectedRoute user = {user} component = {Dashboard} />
+          </>
+        )}/>
+        <Route path = {['/signup']} exact render = {(props) =>
+        (
+          <>
+            <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
+            <Signup />
+          </>
+        )} />
+        <Route path = '/about' exact render = {(props) => (
+          <>
+            <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
+            <AboutBG/>
+            <About/>
+          </>
+        )}/>
+        <Route path = '/recoverpassword' exact render = {(props) => (
+          <>
+            <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
+            <RecoverPassword/>
+          </>
+        )}/>
+        <Route path = '/resetpassword' exact render = {(props) => (
+          <>
+            <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
+            <ResetPassword/>
+          </>
+        )}/>
+        <Route path = '/securitycode' exact render = {(props) => (
+          <>
+            <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
+            <SecurityCode/>
+          </>
+        )}/>
+        <Route path = '/shoppingcart' exact render = {(props) => (
+          <>
+            <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
+            <CartList cartItems = {cartItems} />
+          </>
+        )}/>
+        <Route path = '/checkout' exact render = {(props) => (
+          <>
+            <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
+            <CheckOutForm cartItems = {cartItems} />
+          </>
+        )}/>
+        <Route path = '/contact' exact render = {(props) => (
+          <>
+            <Nav curPage = {props.match.path} user={user} signOut = {signOut}/>
+            <ContactBG/>
+            <Contact/>
+          </>
+        )}/>
+       </Switch>
      <Footer></Footer>
     </div>
     </Router>
