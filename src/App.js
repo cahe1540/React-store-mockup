@@ -31,10 +31,10 @@ function App() {
   const [featured, setFeatured] = useState([]); 
   const [cartItems, setCartItems] = useState([]);
   const [user, setUser] = useState({
-    name: '',
-    email: '',
-    cart: [],
-    history: [],
+    name: 'Carlos',
+    email: 'carlos@yahoo.com',
+    cart: [json[0], json[2]],
+    history: [json[3]],
     jwtToken: ''
   });
 
