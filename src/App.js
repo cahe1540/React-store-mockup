@@ -25,25 +25,10 @@ import { SecurityCode } from './components/UI/authentication/SecurityCode'
 import { CartList } from './components/UI/shoppingCart/CartList'
 import { Dashboard } from './components/UI/authentication/dashboard/Dashboard'
 import { ProtectedRoute } from './components/UI/authentication/ProtectedRoute'
-
-/* import json from './data/data'  */
+import json from './data/data'
 import initializeFeatured from './utils/initializeFeatured'
 import { CheckOutForm } from './components/UI/shoppingCart/CheckOutForm'
 
-firebase.initializeApp(
-  {
-    apiKey: "AIzaSyDVqfEj78zGbFDiZc7pYzrrRFKY3q7XIAE",
-    authDomain: "my-react-store-9fecd.firebaseapp.com",
-    projectId: "my-react-store-9fecd",
-    storageBucket: "my-react-store-9fecd.appspot.com",
-    messagingSenderId: "395089921780",
-    appId: "1:395089921780:web:e5bc4a005e4d63c05c80a1",
-    measurementId: "G-BFJCSD0B7G"
-  }
-);
-
-const auth = firebase.auth();
-const firestore = firebase.firestore();
 
 function App() {
   //generate an array of featured items
@@ -86,8 +71,7 @@ function App() {
 
   useEffect(() => {
     const fetchProductData = async () => {
-      let res = await firestore.collection("Products").get();
-      const data = res.docs.map(doc => doc.data());  
+      const data = json;
       setProducts(data.sort((a,b) => {return a.id - b.id})); //sort the data by id incrementing *important*
       setFeatured(initializeFeatured(data, 7));
     }
