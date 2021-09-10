@@ -2,7 +2,6 @@
   "name": "my-first-store",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cahe1540.github.io/React-store-mockup/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
